@@ -2,7 +2,12 @@
     --border-color: rgb(185, 185, 185);
     --border-radius: 6px;
     --black-color: #333;
+    --blue-color: blue;
+    --gray-color: gray;
+    --green-color: green;
     --caption-color: #3B5998;
+    --background-color: rgb(248, 248, 248);
+    --background-caption-color: rgb(225, 225, 225);
     color: var(--black-color);
     font-family: Verdana, sans-serif;
     font-size: 16px;
@@ -78,14 +83,14 @@ header nav .search {
 header nav .search input {
     padding: 0.2rem 0.25rem 0.2rem 1.5rem;
     font-size: 12px;
-    background: rgb(241, 246, 245) url(../img/search-16x16.png) no-repeat 0.25rem center;
+    background: var(--background-color) url(../img/search-16x16.png) no-repeat 0.25rem center;
     outline: none;
 
     border: 1px solid var(--border-color);
 }
 
 header nav .search input:focus {
-    border-color: #0051ff;
+    border-color: var(--blue-color);
 }
 
 .middle {
@@ -103,15 +108,16 @@ main {
 }
 
 
-main .datatable {
-    border-radius: var(--border-radius);    
+main .datatable {   
     border: 0;
-    overflow: hidden;
 }
 
 main .caption {
     padding: 0.25rem 0rem 0.25rem 0.75rem;
-    background-color: rgba(205, 205, 198, 0.693);
+    background-color: var(--background-caption-color);
+    border-top-left-radius: var(--border-radius);   
+    border-top-right-radius: var(--border-radius);   
+
 }
 
 main .datatable table {  
@@ -121,12 +127,12 @@ main .datatable table {
 
 main .datatable td, main .datatable th {  
     padding: 0.5rem 1rem 0.5rem 1rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--background-caption-color);
     text-align: center;
 }
 
 main .datatable tbody tr:nth-child(2n-1) {  
-    background-color: rgba(238, 243, 244, 0.693);
+    background-color: var(--background-color);
 }
 
 
@@ -138,7 +144,7 @@ main article .title {
 }
 
 main article .information {
-    color: gray;
+    color: var(--gray-color);
     font-size: 0.9rem;
     margin-top: 0.25rem;
 }
@@ -156,7 +162,7 @@ main article .body p:last-child {
 }
 
 main article .attachment {
-    color: gray;
+    color: var(--gray-color);
     font-size: 0.8rem;
     list-style: none;
     padding: 0;   
@@ -179,7 +185,7 @@ main article .footer {
 
 main article .footer .positive-score { 
     font-weight: bold;
-    color:green;
+    color: var(--green-color);
 }   
 
 main article .footer .left { 
@@ -201,6 +207,7 @@ main .login-form-box {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);  
     width: 50%;
+    min-width: 28rem;
     margin: 0 auto;
 }
 
