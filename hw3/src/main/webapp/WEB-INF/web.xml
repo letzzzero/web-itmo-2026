@@ -20,6 +20,16 @@
         <servlet-class>ru.itmo.wp.servlet.StaticServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>MessageServlet</servlet-name>
+        <servlet-class>ru.itmo.wp.servlet.MessageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping> 
+        <servlet-name>MessageServlet</servlet-name>
+        <url-pattern>/message/*</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>StaticServlet</servlet-name>
         <url-pattern>*.png</url-pattern>
